@@ -1,0 +1,66 @@
+.home-page {
+  .sales-banners {
+    &__inner {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      max-height: 400px;
+    }
+
+    &__slider {
+      position: relative;
+      max-width: 870px;
+
+      .slick-dots {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 0;
+        line-height: 11px;
+        margin-bottom: 40px;
+
+        li {
+          display: inline-block;
+          margin: 0 5px;
+
+          &.slick-active {
+            button {
+              background-color: #fff;
+            }
+          }
+        }
+
+        button {
+          width: 11px;
+          height: 11px;
+          border: 1px solid #fff;
+          border-radius: 50%;
+          background-color: transparent;
+          cursor: pointer;
+          outline: none;
+        }
+      }
+    }
+
+    &__slider-arrow {
+      position: absolute;
+      background-color: transparent;
+      border: none;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 3;
+      cursor: pointer;
+    }
+
+    &__slider-arrow--left {
+      left: 15px;
+    }
+
+    &__slider-arrow--right {
+      right: 15px;
+    }
+  }
+}
