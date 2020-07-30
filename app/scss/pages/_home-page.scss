@@ -7,6 +7,10 @@
       max-height: 400px;
     }
 
+    &__slider-item {
+      object-fit: contain;
+    }
+
     &__slider {
       position: relative;
       max-width: 870px;

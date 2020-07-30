@@ -14,5 +14,15 @@ $(function(){
     `
   });
 
+
+  $('.search-products__tabs-item').on('click', function(e) {
+    e.preventDefault();
+
+    $('.search-products__tabs-item').removeClass('search-products__tabs-item--active');
+    $('.search-products__content-item').removeClass('search-products__content-item--active');
+
+    $(this).addClass('search-products__tabs-item--active');
+    $($(this).attr('href')).addClass('search-products__content-item--active');
+  });
   
 });
