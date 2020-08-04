@@ -22,6 +22,7 @@
     "normalize.css": "^8.0.1"
   },
   "dependencies": {
+    "gulp-uglify-es": "^2.0.0",
     "slick-carousel": "^1.8.1"
   }
 }

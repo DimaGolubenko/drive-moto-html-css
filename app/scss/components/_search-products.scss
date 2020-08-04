@@ -1,32 +1,32 @@
 .search-products {
-  &__tabs {
+  .tabs {
     margin-bottom: 25px;
+
+    &__item {
+      font-size: 20px;
+      line-height: 24px;
+      padding: 12px 25px;
+    }
+
+    &__item--selected {
+      font-family: "SFProDisplay-Bold", sans-serif;
+      font-weight: 700;
+      background-color: #f0f0f4;
+      border-radius: 5px;
+    }
   }
 
-  &__tabs-item {
-    font-size: 20px;
-    line-height: 24px;
-    padding: 12px 25px;
+  .tabs-content__item {
+    display: none;
   }
 
-  &__tabs-item--active {
-    font-family: "SFProDisplay-Bold", sans-serif;
-    font-weight: 700;
-    background-color: #f0f0f4;
-    border-radius: 5px;
+  .tabs-content__item--selected {
+    display: block;
   }
 
   &__form {
     display: flex;
     justify-content: space-between;
-  }
-
-  &__content-item {
-    display: none;
-  }
-
-  &__content-item--active {
-    display: block;
   }
 
   &__input {
