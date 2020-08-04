@@ -1,14 +1,17 @@
 .products-item {
   position: relative;
-  max-width: 270px;
+  width: 270px;
+  margin-right: 30px;
 
   &__inner {
-    padding: 52px 35px 41px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 52px 35px 31px;
     text-align: center;
     transition: all 0.3s;
     border: 1px solid #cdcdcd;
     border-radius: 3px;
-    max-width: 270px;
     height: 403px;
     &:hover {
       color: #1c62cd;
@@ -35,13 +38,21 @@
   }
 
   &__img {
-    max-width: 100%;
+    height: 215px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
   }
 
   &__title {
-    margin-bottom: 25px;
     font-size: 18px;
     line-height: 21px;
+    flex-grow: 1;
   }
 
   &__price {
@@ -132,20 +143,20 @@
     display: none;
   }
 
-  &__not-available &__price,
-  &__not-available &__basket {
+  .products-item--not-available &__price,
+  .products-item--not-available &__basket {
     display: none;
   }
 
-  &__not-available &__message {
+  .products-item--not-available &__message {
     display: block;
     font-size: 18px;
-    margin-top: 20px;
+    margin-bottom: 25px;
     font-family: "SFProDisplay-Bold", sans-serif;
     font-weight: 700;
   }
 
-  &__not-available &__callback {
+  .products-item--not-available &__callback {
     display: block;
     position: absolute;
     bottom: 25px;
