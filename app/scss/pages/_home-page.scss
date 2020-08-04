@@ -147,5 +147,19 @@
       font-weight: 700;
       margin-bottom: 25px;
     }
+
+    &__more-wrapper {
+      margin-top: 35px;
+      text-align: center;
+    }
+
+    &__more {
+      padding: 17px 43px;
+      text-transform: uppercase;
+      background-color: #f0f0f4;
+      font-size: 15px;
+      line-height: 18px;
+      letter-spacing: 0.12em;
+    }
   }
 }
