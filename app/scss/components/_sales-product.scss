@@ -1,0 +1,94 @@
+.sales-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 265px;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+  text-align: center;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__label {
+    padding: 8px 20px;
+    font-size: 12px;
+    font-family: "SFProDisplay-Bold", sans-serif;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #1c62cd;
+  }
+
+  &__prices {
+    font-family: "Barlow", sans-serif;
+    color: #1c62cd;
+    text-align: right;
+    padding-top: 2px;
+  }
+
+  &__price-new {
+    font-size: 27px;
+    line-height: 32px;
+    margin-right: 7px;
+    font-weight: 700;
+
+    span {
+      margin-left: 8px;
+      font-size: 25px;
+    }
+  }
+
+  &__price-old {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 17px;
+    color: #c4c4c4;
+    margin-right: 4px;
+    background-image: url("../../images/sales-product-old-price-line.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top right 8px;
+    padding-left: 3px;
+    padding-bottom: 2px;
+
+    span {
+      margin-left: 2px;
+    }
+  }
+
+  &__img {
+    max-width: 125px;
+    object-fit: contain;
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 21px;
+    font-family: "SFProDisplay-Bold", sans-serif;
+    font-weight: 700;
+    padding: 0 25px;
+  }
+
+  &__bottom {
+    padding: 25px;
+    background-color: #f0f0f4;
+    border-radius: 0 0 3px 3px;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  &__date {
+    span {
+      color: #1c62cd;
+      font-family: "Barlow", sans-serif;
+      font-weight: 700;
+      margin-top: 10px;
+    }
+  }
+}

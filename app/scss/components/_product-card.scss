@@ -1,0 +1,171 @@
+.products-item {
+  position: relative;
+  width: 270px;
+  margin-right: 30px;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 52px 35px 31px;
+    text-align: center;
+    transition: all 0.3s;
+    border: 1px solid #cdcdcd;
+    border-radius: 3px;
+    height: 403px;
+    &:hover {
+      color: #1c62cd;
+      border: none;
+      box-shadow: 3px 3px 20px rgba(50, 50, 50, 0.25);
+
+      &.products-item__inner::after {
+        display: block;
+        content: "посмотреть товар";
+        position: absolute;
+        width: 230px;
+        top: 122px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 18px 0;
+        font-size: 20px;
+        line-height: 24px;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        border-radius: 3px;
+        color: #2f3035;
+      }
+    }
+  }
+
+  &__img {
+    height: 215px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 21px;
+    flex-grow: 1;
+  }
+
+  &__price {
+    font-family: "Barlow", serif;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  &__favorite {
+    display: block;
+    position: absolute;
+    top: 16px;
+    right: 19px;
+    width: 24px;
+    height: 22px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 22px;
+      background-image: url("../../images/favorite.svg");
+    }
+  }
+
+  &__favorite--active::after {
+    background-image: url("../../images/favorite-active.svg");
+  }
+
+  &__basket {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    height: 40px;
+    background-color: #1c62cd;
+    border-radius: 10px 0px 3px 0px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 30px;
+      height: 23px;
+      background-image: url("../../images/basket-white.svg");
+    }
+  }
+
+  &__labels {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__label {
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    padding: 6px 15px;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.07em;
+  }
+
+  &__label--sale {
+    color: #fff;
+    background-color: #1c62cd;
+  }
+
+  &__message {
+    display: none;
+  }
+
+  &__callback {
+    display: none;
+  }
+
+  .products-item--not-available &__price,
+  .products-item--not-available &__basket {
+    display: none;
+  }
+
+  .products-item--not-available &__message {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 25px;
+    font-family: "SFProDisplay-Bold", sans-serif;
+    font-weight: 700;
+  }
+
+  .products-item--not-available &__callback {
+    display: block;
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 16px;
+    line-height: 19px;
+    color: #1c62cd;
+    text-decoration: underline;
+  }
+}
